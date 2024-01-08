@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>js.dasar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;0,1000;1,200;1,300;1,1000&display=swap" rel="stylesheet">
+  <!-- HTML -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container" id="container">
+    
+    <!--halaman utama-->
+   <div class="container3" id="selector">
+   <div class="infor">
+   <a href="#" id="informasi"><i data-feather="info" class="fatinfo"></i></a>
+    </div>
+     <div class="ket2">
+     <h2>matematika mudah</h2>
+        <p>lo mau hitung apa tinggal tulis di bawah</p>
+      </div>
+      <div class="dalem3">
+        <label class="bel1">
+        <input type="text" name="select" id="selector1" placeholder="mau hitung apa,ketik disini ">
+        </label>
+      </div>
+      <div class="emet4">
+        <button class="why" onclick="selecTor()">gass!</button>
+    </div>
+    <div class="me">
+      <h3>made by <a href="https://www.instagram.com/fzigaga?igsh=MXV3d3NwbjQzYXV4dw==">fzigaga</a></h3>
+    </div>
+    </div>
+    
+    <!--segitiga-->
+    <div class="container2" id="sisiMiring">
+    <div class="close">
+       <a href="#" class="close-icon"><i data-feather="x" class="close-x"></i></a>
+     </div>
+    <div class="ket1">
+    <h2>segitiga</h2>
+    <p>ini merupakan operasi hitung sisi miring segitiga</p>
+    </div>
+    <div class="dalem1">
+     <label class="bel1">
+      <input type="text" name="a" id="a" placeholder=" sisi 'a'">
+     </label>
+    <label class="bel2">
+      <input type="text" name="b" id="b" placeholder="sisi 'b'">
+    </label>
+    <label class="bel3">
+      <input type="text" name="c" id="c" placeholder="sisi 'c'">
+    </label>
+    </div>
+    <div class="emet2">
+    <button class="emet3" onclick="hitungSimir()">gass</button>
+    </div>
+    <div class="cara" id="cara">
+      <div class="jawaban">
+        <p class="hasil-p"></p>
+      </div>
+    </div>
+    </div>
+    
+   <!--persegi panjang-->
+   <div class="container1" id="persegi Panjang">
+    <div class="close">
+    <a href="#" class="close-icon"><i data-feather="x" class="close-x"></i></a>
+    </div>
+    <div class="ket">
+    <h2>luas persegi panjang</h2>
+    <p>ini merupakan operasi hitung luas persegi panjang</p>
+    </div>
+    <div class="dalem">
+     <label class="bel1">
+      <input type="text" name="panjang" id="panjang" placeholder=" panjang">
+     </label>
+    <label class="bel2">
+      <input type="text" name="lebar" id="lebar" placeholder=" lebar">
+    </label>
+    <label class="bel3">
+      <input type="text" name="hasil" id="hasil" placeholder="luas">
+    </label>
+    </div>
+    <div class="emet">
+    <button class="emet1" onclick="hitungLuas()">gass</button>
+    </div>
+    <div class="caraPp" id="cara">
+      <div class="jawaban">
+        <p class="hasil-p-Pp"></p>
+      </div>
+    </div>
+    </div>
+    
+    <!--trigonometri-->
+    <div class="container4" id="trigonometri">
+    <div class="close">
+    <a href="#" class="close-icon"><i data-feather="x" class="close-x"></i></a>
+    </div>
+    <div class="ket">
+    <h2>trigonometri</h2>
+    <p>ini merupakan operasi hitung trigonometri</p>
+    </div>
+    <div class="dalem">
+     <label class="bel1">
+      <input type="text" name="sinCosTan" id="sinCosTan" placeholder="sin/cos/tan">
+     </label>
+    <label class="bel2">
+      <input type="text" name="derajat" id="derajat" placeholder="derajat">
+    </label>
+    <label class="bel3">
+      <input type="text" name="sudutIstimewa" id="sudutIstimewa" placeholder="hasil">
+    </label>
+    </div>
+    <div class="emet">
+    <button class="emet1" onclick="hitungSudutIstime()">gass</button>
+    </div>
+    <div class="caraTri" id="cara">
+      <div class="jawaban">
+        <p class="hasil-p-tri"></p>
+        <p class="hasil-p-tri1"></p>
+      </div>
+    </div>
+    </div>
+    
+    
+    <!--informasi halaman utama-->
+   <div class="the-inf">
+    <div class="inf" id="inf">
+    <div class="close-info">
+    <a href="#" class="close-icon"><i data-feather="x" class="close-x"></i></a>
+    </div>
+    <div class="infh">
+    <h1>info daftar operasi!</h1>
+    <h2>operasi baru ada untuk</h2>
+    </div>
+    <div class="infp">
+    <li>segitiga (sisi miring)</li>
+    <li>persegi panjang (luas)</li>
+    <li>trigonometri (sudut istimewa)</li>
+    </div>
+    <div class="made">
+    <h3>made by <a href="https://www.instagram.com/fzigaga?igsh=MXV3d3NwbjQzYXV4dw==">fzigaga</a></h3>
+    </div>
+  </div>
+  </div>
+  
+  </main>
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+  <script>
+      feather.replace();
+    </script>
+</body>
+</html>
