@@ -24,14 +24,12 @@ function selecTor() {
 // === berarti harus benar, harus sama nilai nya 
   if (selector === 'persegi' || selector === 'persegi ' || selector === 'Persegi' || selector === 'Persegi ' || selector === 'Persegipanjang ' || selector === 'persegipanjang ' || selector === 'Persegi panjang ' || selector === 'Persegi panjang' || selector === 'Persegipanjang' || selector === 'persegipanjang' || selector === 'persegi panjang' || selector === 'persegi panjang ' || selector === 'pp ' || selector === 'pp' || selector === 'PP ' || selector === 'PP' || selector === 'Pp ' || selector === 'Pp'){
     persegi.style.display = 'flex'
-    //persegi.style.animation ='animasi2 1.2s 1 ease forwards';
-    selhid.style.display = 'none'
+    persegi.style.animation ='animasi2 1.2s 1 ease forwards';
+    selhid.style.animation ='animasi 2s 1 ease forwards';
 //ketika close item di klik di container
   document.querySelector('.container1 .close-icon').onclick = (e) =>{
   persegi.style.animation ='animasi 2s 1 ease forwards';
-  persegi.style.display = 'none'
-  container3.style.animation = 'animasi 1.2s 1 ease forwards';
-  selhid.style.display = 'flex'
+  container3.style.animation = 'animasi2 1.2s 1 ease forwards';
 };
   } 
   //.trim() digunakan untuk menghapus spasi kosong (baik spasi di awal maupun di akhir) dari sebuah string.
@@ -46,15 +44,13 @@ function selecTor() {
   selector.trim().toLowerCase() === 'sgtg '
 ) {
   segitiga.style.display = 'flex'
-  //segitiga.style.animation ='animasi2 1.2s 1 ease forwards';
-  selhid.style.display = 'none'
+  segitiga.style.animation = 'animasi2 1.2s 1 ease forwards';
+  selhid.style.animation = 'animasi 2s 1 ease forwards';
   
 //ketika close item di klik di container
   document.querySelector('.close-icon').onclick = (e) =>{
-    segitiga.style.animation ='animasi 2s 1 ease forwards';
-    segitiga.style.display = 'none'
-    container3.style.animation = 'animasi 1.2s 1 ease forwards';
-    selhid.style.display = 'flex'
+  segitiga.style.animation = 'animasi 2s 1 ease forwards';
+  container3.style.animation = 'animasi2 1.2s 1 ease forwards';
 };
 }
 else if (
@@ -67,14 +63,12 @@ else if (
   selector.trim().toLowerCase() === 'tgm '
 ) {
   trigonometri.style.display = 'flex'
-  //trigonometri.style.animation ='animasi2 1.2s 1 ease forwards';
-  selhid.style.display = 'none'
+  trigonometri.style.animation = 'animasi2 1.2s 1 ease forwards';
+  selhid.style.animation = 'animasi 2s 1 ease forwards';
 //ketika close item di klik di container
-  document.querySelector('.container4 .close-icon').onclick = (e) =>{
-    trigonometri.style.animation ='animasi 2s 1 ease forwards';
-    trigonometri.style.display = 'none'
-    container3.style.animation = 'animasi 1.2s 1 ease forwards';
-    selhid.style.display = 'flex'
+  document.querySelector('.container4 .close-icontri').onclick = (e) =>{
+  trigonometri.style.animation = 'animasi 2s 1 ease forwards';
+  container3.style.animation = 'animasi2 1.2s 1 ease forwards';
 };
 }
   else {
@@ -82,6 +76,20 @@ else if (
   }
   
 }
+
+var inf1 = document.querySelector('#infotrii');
+  // toggle info untuk trigonometri 
+document.querySelector('.infortri #informasi1').onclick = (e) =>{
+  inf1.style.display = 'flex';
+  inf1.style.animation = 'animasi3 1s 1 forwards';
+  e.preventDefault();
+};
+
+// ketika close item di klik di bagian trigonometri
+document.querySelector('.inf1 .close-icon1').onclick = (e) =>{
+  inf1.style.display = 'none';
+  e.preventDefault();
+};
 
 // function segitiga 
 //parseFloat mengubah data yang awalnya string menjadi number(angka).
@@ -162,9 +170,11 @@ function hitungSudutIstime() {
   if (!isNaN(derajat)) {
     var kuadran = '';
     var deg = '';
-    var hasilSdt = '';
+    var hasilSdt1 = '';
+    var hasilSdt2 = '';
+    var hasilSdt3 = '';
   //selector derajat negatif/positif 
-    if ((derajat >= 0 && derajat < 91) || (derajat>=-90 && derajat<0)) {
+    if ((derajat >= -1 && derajat < 91) || (derajat>=-90 && derajat<0)) {
       kuadran = 1;
       deg = derajat - 0;
     } else if ((derajat >= 90 && derajat < 181) || (derajat >= -180 && derajat < -90)) {
@@ -190,17 +200,15 @@ function hitungSudutIstime() {
             deg = 360 - derajat;
           } else if (derajat >= -360 && derajat < -271) {
             deg = Math.abs(derajat) - 360;
-    } else {
-      kuadran = '2×';
     }
     }
 // selector untuk hitung sin/cos/tan
     if (sinCosTan.trim().toLowerCase() === 'sin' || sinCosTan.trim().toLowerCase() === 'sin ') {
-      hasilSdt = hitungSin(deg, kuadran);
-      sudutInput.value = hasilSdt;
+      hasilSdt1 = hitungSin(deg, kuadran);
+      sudutInput.value = hasilSdt1;
      operasiTri = `tan${derajat}°=${
        //seleksi masuk kuadran berapa 
-       (kuadran === 1) ? `${derajat} - 0` :
+       (kuadran === 1) ? `${derajat} - 0 `:
        (kuadran === 2) ?
      // seleksi derajat positif/negatif 
        (derajat >= 90) ? `180 - ${derajat}` :
@@ -218,14 +226,14 @@ function hitungSudutIstime() {
               '' : ''
   }
       = ${deg}`;
-      hasilTri = ` sin${deg}°= ${hasilSdt} (kuadran${kuadran})`;
+      hasilTri = ` sin${deg}°= ${hasilSdt1} (kuadran${kuadran})`;
       
     } else if (sinCosTan.trim().toLowerCase() === 'cos' || sinCosTan.trim().toLowerCase() === 'cos ') {
-      hasilSdt = hitungCos(deg, kuadran);
-      sudutInput.value = hasilSdt;
+      hasilSdt2 = hitungCos(deg, kuadran);
+      sudutInput.value = hasilSdt2;
       operasiTri = `tan${derajat}°=${
        //seleksi masuk kuadran berapa 
-          (kuadran === 1) ? `${derajat} - 0`:
+          (kuadran === 1) ? `${derajat} - 0` :
           (kuadran === 2) ?
        // seleksi derajat positif/negatif 
           (derajat >= 90) ? `180 - ${derajat}` :
@@ -243,17 +251,17 @@ function hitungSudutIstime() {
                '' : ''
  } 
             = ${deg}`;
-      hasilTri = ` cos${deg}°= ${hasilSdt} (kuadran${kuadran})`;
+      hasilTri = ` cos${deg}°= ${hasilSdt2} (kuadran${kuadran})`;
       
     } else if (sinCosTan.trim().toLowerCase() === 'tan' || sinCosTan.trim().toLowerCase() === 'tan ') {
-      hasilSdt = hitungTan(deg, kuadran);
-      sudutInput.value = hasilSdt;
+      hasilSdt3 = hitungTan(deg, kuadran);
+      sudutInput.value = hasilSdt3;
       operasiTri = `tan${derajat}°=${
               //seleksi masuk kuadran berapa 
               (kuadran === 1) ? `${derajat} - 0` :
               (kuadran === 2) ?
               // seleksi derajat positif/negatif 
-              (derajat >= 90) ? `180 - ${derajat}`:
+              (derajat >= 90) ? `180 - ${derajat}` :
               (derajat < -90) ? `-180 -( ${derajat})` :
               '' : // string ' ' supaya tidak eror
               (kuadran === 3) ?
@@ -268,7 +276,7 @@ function hitungSudutIstime() {
               '' : ''
             } 
             = ${deg}`;
-      hasilTri = ` tan${deg}°= ${hasilSdt} (kuadran${kuadran})`;
+      hasilTri = `tan${deg}°= ${hasilSdt3} (kuadran${kuadran})`;
       
     }
     document.querySelector('.hasil-p-tri').textContent = operasiTri;
@@ -297,32 +305,32 @@ function hitungSin(deg, kuadran) {
 }
 
 // function untuk jawaban sudut istimewa
-function hitungSinEnd(deg,degmin) {
-  var sudut = '';
+function hitungSinEnd(deg) {
+  var sudut1 = '';
 
   if (deg == 30) {
-    sudut = '1/2';
+    sudut1 = '1/2';
   } else if (deg == 45) {
-    sudut = '1/2√2';
+    sudut1 = '1/2√2';
   } else if (deg == 60) {
-    sudut = '1/2√3';
+    sudut1 = '1/2√3';
   } else if (deg == 90) {
-    sudut = '1';
+    sudut1 = '1';
   } else if (deg == 0) {
-    sudut = '0';
+    sudut1 = '0';
   }
   else if(deg == -30) {
-    sudut = '1/2';
+    sudut1 = '1/2';
   } else if (deg == -45) {
-    sudut = '1/2√2';
+    sudut1 = '1/2√2';
   } else if (deg == -60) {
-    sudut = '1/2√3';
+    sudut1 = '1/2√3';
   } else if (deg == -90) {
-    sudut = '1';
+    sudut1 = '1';
   } else {
-    sudut = 'belum tersedia';
+    sudut1 = 'belum tersedia';
   }
-  return sudut;
+  return sudut1;
 }
 //function hitung cos
 function hitungCos(deg, kuadran) {
@@ -366,7 +374,7 @@ function hitungCosEnd(deg) {
     sudut = '1/2';
   }else if (deg == -90) {
     sudut = '0';
-  }else if (deg == -0) {
+  }else if (deg == 0 ) {
     sudut = '1';
   }else {
     sudut = 'belum tersedia';
@@ -403,7 +411,7 @@ function hitungTanEnd(deg) {
   } else if (deg == 60) {
     sudut = '1/3';
   } else if (deg == 90) {
-    sudut = 'infinity';
+    sudut = 'infinity🔥';
   } else if (deg == 0) {
     sudut = '0';
   } else if (deg == -30) {
@@ -413,7 +421,7 @@ function hitungTanEnd(deg) {
   } else if (deg == -60) {
     sudut = '1/3';
   } else if (deg == -90) {
-    sudut = 'infinity';
+    sudut = 'infinity🔥';
   }else {
     sudut = 'belum tersedia';
   }
