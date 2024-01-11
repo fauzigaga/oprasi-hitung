@@ -24,12 +24,14 @@ function selecTor() {
 // === berarti harus benar, harus sama nilai nya 
   if (selector === 'persegi' || selector === 'persegi ' || selector === 'Persegi' || selector === 'Persegi ' || selector === 'Persegipanjang ' || selector === 'persegipanjang ' || selector === 'Persegi panjang ' || selector === 'Persegi panjang' || selector === 'Persegipanjang' || selector === 'persegipanjang' || selector === 'persegi panjang' || selector === 'persegi panjang ' || selector === 'pp ' || selector === 'pp' || selector === 'PP ' || selector === 'PP' || selector === 'Pp ' || selector === 'Pp'){
     persegi.style.display = 'flex'
-    persegi.style.animation ='animasi2 1.2s 1 ease forwards';
-    selhid.style.animation ='animasi 2s 1 ease forwards';
+    //persegi.style.animation ='animasi2 1.2s 1 ease forwards';
+    selhid.style.display = 'none'
 //ketika close item di klik di container
   document.querySelector('.container1 .close-icon').onclick = (e) =>{
   persegi.style.animation ='animasi 2s 1 ease forwards';
-  container3.style.animation = 'animasi2 1.2s 1 ease forwards';
+  persegi.style.display = 'none'
+  container3.style.animation = 'animasi 1.2s 1 ease forwards';
+  selhid.style.display = 'flex'
 };
   } 
   //.trim() digunakan untuk menghapus spasi kosong (baik spasi di awal maupun di akhir) dari sebuah string.
@@ -44,13 +46,15 @@ function selecTor() {
   selector.trim().toLowerCase() === 'sgtg '
 ) {
   segitiga.style.display = 'flex'
-  segitiga.style.animation = 'animasi2 1.2s 1 ease forwards';
-  selhid.style.animation = 'animasi 2s 1 ease forwards';
+  //segitiga.style.animation ='animasi2 1.2s 1 ease forwards';
+  selhid.style.display = 'none'
   
 //ketika close item di klik di container
   document.querySelector('.close-icon').onclick = (e) =>{
-  segitiga.style.animation = 'animasi 2s 1 ease forwards';
-  container3.style.animation = 'animasi2 1.2s 1 ease forwards';
+    segitiga.style.animation ='animasi 2s 1 ease forwards';
+    segitiga.style.display = 'none'
+    container3.style.animation = 'animasi 1.2s 1 ease forwards';
+    selhid.style.display = 'flex'
 };
 }
 else if (
@@ -63,12 +67,14 @@ else if (
   selector.trim().toLowerCase() === 'tgm '
 ) {
   trigonometri.style.display = 'flex'
-  trigonometri.style.animation = 'animasi2 1.2s 1 ease forwards';
-  selhid.style.animation = 'animasi 2s 1 ease forwards';
+  //trigonometri.style.animation ='animasi2 1.2s 1 ease forwards';
+  selhid.style.display = 'none'
 //ketika close item di klik di container
-  document.querySelector('.container4 .close-icontri').onclick = (e) =>{
-  trigonometri.style.animation = 'animasi 2s 1 ease forwards';
-  container3.style.animation = 'animasi2 1.2s 1 ease forwards';
+document.querySelector('.container4 .close-icontri').onclick = (e) =>{
+    trigonometri.style.animation ='animasi 2s 1 ease forwards';
+    trigonometri.style.display = 'none'
+    container3.style.animation = 'animasi 1.2s 1 ease forwards';
+    selhid.style.display = 'flex'
 };
 }
   else {

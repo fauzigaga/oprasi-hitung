@@ -35,11 +35,21 @@ body{
   align-items: center;
   padding: 3px 3px 5%;
 }
-.infor a{
+.infortri{
+  padding: 3px 3px 5%;
+}
+.closetri{
+  padding: 3px 3px 5%;
+
+}
+.infor a,
+.infortri a,
+.closetri a{
   color: #fff;
   opacity: 60%;
 }
-.infor .fatinfo{
+.fatinfo,
+.close-xtri{
   width: 15px;
   height: 15px;
 }
@@ -60,6 +70,15 @@ body{
   box-shadow: 0px 0px 2px 1px rgba(154, 154, 154, 1);
   position: absolute;
   
+}
+
+.container4 .icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  top: 0;
+  position: absolute;
+  min-width: 100%;
 }
 /*.container1{
   display: none;
@@ -218,7 +237,17 @@ body{
   position: absolute;
   backdrop-filter: blur(5px);
 }
-.inf{
+.triinf{
+  min-width: 100%;
+  min-height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backdrop-filter: blur(5px);
+}
+.inf,
+.inf1{
   background: transparent;
   display: flex;
   align-items: center;
@@ -230,7 +259,8 @@ body{
   border-radius: 15px;
 }
 .close,
-.close-info {
+.close-info,
+.close-info1{
   display: flex;
   justify-content: flex-end;
   min-width: 97%;
@@ -239,7 +269,8 @@ body{
   align-items: center;
   padding: 3px 3px 5%;
 }
-.close-info a{
+.close-info a,
+.close-info1 a{
   color: #fff;
   opacity: 50%;
 }
