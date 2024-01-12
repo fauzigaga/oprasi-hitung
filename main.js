@@ -123,7 +123,7 @@ function hitungSimir() {
      document.querySelector('#c').value = c;
      hasilOperasiSgt = `sisi c = (${a}×${a})+(${b}×${b}) = ${c}`;
    } else {
-     alert('Masukkan satu nilai yang tidak diisi untuk dihitung');
+     alert('kosongkan satu kolom yang ingin di hitung, contoh ingin menghitung c (maka isi a dan b) c nya di kosongi');
      return;
    }
     document.querySelector('.hasil-p').textContent = hasilOperasiSgt;
@@ -156,7 +156,10 @@ function hitungLuas() {
      var lebar = luas/panjang;
      document.querySelector('#lebar').value = lebar;
      hasilOperasi = `l = ${luas}/${panjang} = ${lebar}`;
-   }
+   } else {
+    alert('kosongkan satu kolom yang ingin di hitung, contoh ingin menghitung luas (maka isi panjang dan lebar) luasnya di kosongi');
+    return; 
+  }
    //menampilkan hasil operasi 
    document.querySelector('.hasil-p-Pp').textContent = hasilOperasi;
    
@@ -212,7 +215,7 @@ function hitungSudutIstime() {
     if (sinCosTan.trim().toLowerCase() === 'sin' || sinCosTan.trim().toLowerCase() === 'sin ') {
       hasilSdt1 = hitungSin(deg, kuadran);
       sudutInput.value = hasilSdt1;
-     operasiTri = `tan${derajat}°=${
+     operasiTri = `sin${derajat}°=${
        //seleksi masuk kuadran berapa 
        (kuadran === 1) ? `${derajat} - 0 `:
        (kuadran === 2) ?
@@ -237,7 +240,7 @@ function hitungSudutIstime() {
     } else if (sinCosTan.trim().toLowerCase() === 'cos' || sinCosTan.trim().toLowerCase() === 'cos ') {
       hasilSdt2 = hitungCos(deg, kuadran);
       sudutInput.value = hasilSdt2;
-      operasiTri = `tan${derajat}°=${
+      operasiTri = `cos${derajat}°=${
        //seleksi masuk kuadran berapa 
           (kuadran === 1) ? `${derajat} - 0` :
           (kuadran === 2) ?

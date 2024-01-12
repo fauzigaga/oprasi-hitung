@@ -230,7 +230,7 @@ body{
 }
 .the-inf{
   min-width: 100%;
-  min-height: 100%;
+  height: 100vh;
   display: none;
   align-items: center;
   justify-content: center;
@@ -239,7 +239,7 @@ body{
 }
 .triinf{
   min-width: 100%;
-  min-height: 100%;
+  height: 100vh;
   display: none;
   align-items: center;
   justify-content: center;
@@ -306,7 +306,7 @@ body{
 }
 .infh h2{
   font-size: 0.7rem;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .made h3{
