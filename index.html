@@ -14,6 +14,8 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js">
+  </script>
 </head>
 
 <body>
@@ -28,11 +30,11 @@
      <h2>matematika mudah</h2>
         <p>lo mau hitung apa tinggal tulis di bawah</p>
       </div>
-      <div class="dalem3">
+      <form action="" class="dalem3" autocomplete="off">
         <label class="bel1">
-        <input type="text" name="select" id="selector1" placeholder="mau hitung apa,ketik disini ">
+        <input type="text" name="select" id="selector1" placeholder="mau hitung apa,ketik disini " autofocus>
         </label>
-      </div>
+      </form>
       <div class="emet4">
         <button class="why" onclick="selecTor()">gass!</button>
     </div>
@@ -50,7 +52,7 @@
     <h2>segitiga</h2>
     <p>ini merupakan operasi hitung sisi miring segitiga</p>
     </div>
-    <div class="dalem1">
+    <form action="" class="dalem1" autocomplete="off">
      <label class="bel1">
       <input type="text" name="a" id="a" placeholder=" sisi 'a'">
      </label>
@@ -60,7 +62,7 @@
     <label class="bel3">
       <input type="text" name="c" id="c" placeholder="sisi 'c'">
     </label>
-    </div>
+    </form>
     <div class="emet2">
     <button class="emet3" onclick="hitungSimir()">gass</button>
     </div>
@@ -80,7 +82,7 @@
     <h2>luas persegi panjang</h2>
     <p>ini merupakan operasi hitung luas persegi panjang</p>
     </div>
-    <div class="dalem">
+    <form action="" class="dalem" autocomplete="off">
      <label class="bel1">
       <input type="text" name="panjang" id="panjang" placeholder=" panjang">
      </label>
@@ -90,7 +92,7 @@
     <label class="bel3">
       <input type="text" name="hasil" id="hasil" placeholder="luas">
     </label>
-    </div>
+    </form>
     <div class="emet">
     <button class="emet1" onclick="hitungLuas()">gass</button>
     </div>
@@ -116,9 +118,9 @@
         <p>ini merupakan operasi hitung trigonometri</p>
         <p>jika jawaban = undefined, penjelasannya ada di icon i di pojok kiri </p>
         </div>
-      <div class="dalem">
+      <form action="" class="dalem" autocomplete="off">
       <label class="bel1">
-        <input type="text" name="sinCosTan" id="sinCosTan" placeholder="sin/cos/tan">
+        <input type="text" name="sinCosTan" id="sinCosTan" placeholder="sin/cos/tan" autofocus>
       </label>
       <label class="bel2">
         <input type="text" name="derajat" id="derajat" placeholder="derajat">
@@ -126,7 +128,7 @@
       <label class="bel3">
         <input type="text" name="sudutIstimewa" id="sudutIstimewa" placeholder="hasil">
       </label>
-      </div>
+      </form>
       <div class="emet">
       <button class="emet1" onclick="hitungSudutIstime()">gass</button>
       </div>
@@ -138,7 +140,162 @@
       </div>
       </div>
     
+  <!--invers matriks-->
+  <div class="container5" id="matriks">
+    <div class="close">
+    <a href="#" class="close-icon"><i data-feather="x" class="close-x"></i></a>
+    </div>
+    <div class="ket">
+    <h2>ordo matriks</h2>
+    <p>memilih ordo matriks 2×2 atau 3×3</p>
+    </div>
+    <div class="ordomat">
+    <select class="ordo" id="selectOrdo" onchange="pilihOrdo()">
+      <option value="1">ordo </option>
+      <option value="2">ordo 2x2</option>
+      <option value="3">ordo 3x3</option>
+    </select>
+    </div>
     
+    </div>
+    
+    <!--invers matriks 3*3 ga bener -->
+   <div class="container10" id="matriks">
+    <div class="close">
+    <a href="#" class="close-icon"><i data-feather="x" class="close-x"></i></a>
+    </div>
+    <div class="ket">
+    <h2>invers matriks 3×3</h2>
+    <p>isi angka langsung perbaris</p>
+    </div>
+    <form action="" class="dalem" autocomplete="off">
+     <label class="bel1">
+      <input type="text" name="panjang" id="baris1" placeholder="baris 1, kolom 1,2,3" autofocus>
+     </label>
+    <label class="bel2">
+      <input type="text" name="lebar" id="baris2" placeholder="baris 2 kolom 1,2,3">
+    </label>
+    <label class="bel3">
+      <input type="text" name="hasil" id="baris3" placeholder="baris 3 kolom 1,2,3">
+    </label>
+    </form>
+    <div class="emet">
+    <button class="emet1" onclick="hitungInvers()">gass</button>
+    </div>
+    <div class="caraPp" id="cara">
+      <div class="jawaban">
+        <p class="hasil-p-Pp"></p>
+        <p class="hasil-p-Pp1"></p>
+        <p class="hasil-p-Pp2"></p>
+        <p class="hasil-p-Pp3"></p>
+      </div>
+    </div>
+    </div>
+    
+    <!--invers matriks 2*2-->
+     <div class="container11" id="matriks2">
+      <div class="icon">
+        <div class="informat">
+        <a href="#" id="informasi1"><i data-feather="info" class="fatinfo"></i></a>
+         </div>
+         <div class="closemat">
+         <a href="#" class="close-iconmat"><i data-feather="x" class="close-xtri"></i></a>
+         </div>
+        </div>
+    <div class="ket">
+    <h2>invers matriks 2×2</h2>
+    <p>isi satu persatu angkanya </p>
+    </div>
+    <form action="" class="dalem" autocomplete="off">
+     <label class="bel1">
+      <input type="text" name="panjang" id="baris11" placeholder="baris 1, kolom 1">
+     </label>
+    <label class="bel2">
+      <input type="text" name="lebar" id="baris22" placeholder="baris 1 kolom 2">
+    </label>
+    <label class="bel3">
+      <input type="text" name="lebar" id="baris33" placeholder="baris 2 kolom 1">
+    </label>
+    <label class="bel4">
+      <input type="text" name="lebar" id="baris44" placeholder=" baris 2 kolom 2">
+    </label>
+    </form>
+    <div class="emet">
+    <button class="emet2" onclick="hitungInvMat()">gass</button>
+    </div>
+    <div class="caraInv2" id="caraInv">
+      <div class="jawaban">
+        <p class="hasil-p-Ppp"></p>
+        <p class="hasil-p-Pp11"></p>
+        <p class="hasil-p-Pp22"></p>
+        <p class="hasil-p-Pp33"></p>
+        <p class="hasil-p-Pp44"></p>
+        <p class="hasil-p-Pp55"></p>
+      </div>
+    </div>
+    </div>
+    
+<!--invers matriks 3×3 ribet-->
+<div class="container12" id="matriks3">
+  <div class="icon">
+    <div class="informat2">
+    <a href="#" id="informasi1"><i data-feather="info" class="fatinfo"></i></a>
+     </div>
+     <div class="closemat">
+     <a href="#" class="close-iconmat"><i data-feather="x" class="close-xtri"></i></a>
+     </div>
+    </div>
+  <div class="ket">
+  <h2>invers matriks 3×3</h2>
+  <p>isi satu persatu angkanya </p>
+  </div>
+  <form action="" class="dalemInv" autocomplete="off" >
+   <label class="bel1">
+    <input type="number" name="panjang" id="nilai1" placeholder="baris 1, kolom 1" autofocus>
+   </label>
+  <label class="bel2">
+    <input type="number" name="lebar" id="nilai2" placeholder="baris 1 kolom 2">
+  </label>
+  <label class="bel3">
+    <input type="number" name="lebar" id="nilai3" placeholder="baris 1 kolom 3">
+  </label>
+  <label class="bel4">
+    <input type="number" name="lebar" id="nilai4" placeholder=" baris 2 kolom 1">
+  </label>
+  <label class="bel5">
+    <input type="number" name="lebar" id="nilai5" placeholder=" baris 2 kolom 2">
+  </label>
+  <label class="bel6">
+    <input type="number" name="lebar" id="nilai6" placeholder=" baris 2 kolom 3">
+  </label>
+  <label class="bel7">
+    <input type="number" name="lebar" id="nilai7" placeholder=" baris 3 kolom 1">
+  </label>
+  <label class="bel8">
+    <input type="number" name="lebar" id="nilai8" placeholder=" baris 3 kolom 2">
+  </label>
+  <label class="bel9">
+    <input type="number" name="lebar" id="nilai9" placeholder=" baris 3 kolom 3">
+  </label>
+  </form>
+  <div class="emet">
+  <button class="emet2" onclick="invRibet()">gass</button>
+  </div>
+  <div class="inversCara" id="inversCara">
+    <div class="jawaban">
+      <p class="hasil-p-Pp0"></p>
+      <p class="hasil-p-Pp12"></p>
+      <p class="hasil-p-Pp23"></p>
+      <p class="hasil-p-Pp34"></p>
+      <p class="hasil-p-Pp45"></p>
+      <p class="hasil-p-Pp56"></p>
+      <p class="hasil-p-Pp67"></p>
+      <p class="hasil-p-Pp78"></p>
+    </div>
+  </div>
+  </div>
+
+
     <!--informasi halaman utama-->
    <div class="the-inf">
     <div class="inf" id="inf">
@@ -153,6 +310,8 @@
     <li>segitiga (sisi miring)</li>
     <li>persegi panjang (luas)</li>
     <li>trigonometri (sudut istimewa)</li>
+    <li>invers matriks  (2*2)</li>
+    <li>invers matriks (3*3)</li>
     </div>
     <div class="made">
     <h3>made by <a href="https://www.instagram.com/fzigaga?igsh=MXV3d3NwbjQzYXV4dw==">fzigaga</a></h3>
@@ -178,7 +337,36 @@
     </div>
   </div>
   </div>
-  
+  <!--kotak info matriks-->
+  <div class="matinf" id="matinf">
+    <div class="inf2" id="inf2">
+    <div class="close-info1">
+    <a href="#" class="close-icon2"><i data-feather="x" class="close-xx"></i></a>
+    </div>
+    <div class="infh">
+    <h1>tutorial!</h1>
+    <h2>cara menggunakan operasi hitung invers matriks</h2>
+    </div>
+    <div class="infmat">
+    <div class="ft1">
+      <p>1.pertama masukkan angka satu persatu</p>
+    <img src="tutor1.jpg" alt="tutor1.jpg">
+    </div>
+    <div class="ft2">
+      <p>2.pencet gas untuk memunculkan hasil</p>
+    <img src="tutor2.jpg" alt="tutor2.jpg">
+    </div>
+    <div class="ft3">
+      <p>3.hasil muncul di bawah tombol gas</p>
+    <img src="tutor3.jpg" alt="tutor3.jpg">
+    </div>
+    </div>
+    <div class="made">
+    <h3>made by <a href="https://www.instagram.com/fzigaga?igsh=MXV3d3NwbjQzYXV4dw==">fzigaga</a></h3>
+    </div>
+  </div>
+  </div>
+
   </main>
   
   <!-- Project -->

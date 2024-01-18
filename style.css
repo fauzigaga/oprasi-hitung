@@ -35,16 +35,22 @@ body{
   align-items: center;
   padding: 3px 3px 5%;
 }
-.infortri{
+.infortri,
+.informat,
+.informat2{
   padding: 3px 3px 5%;
 }
-.closetri{
+.closetri,
+.closemat{
   padding: 3px 3px 5%;
 
 }
 .infor a,
 .infortri a,
-.closetri a{
+.closetri a,
+.closemat a,
+.informat a,
+.informat2 a{
   color: #fff;
   opacity: 60%;
 }
@@ -56,7 +62,11 @@ body{
 
 .container1,
 .container2,
-.container4{
+.container4,
+.container5,
+.container10,
+.container11,
+.container12{
   display: none;
   background: transparent;
   backdrop-filter: blur(1px);
@@ -73,6 +83,14 @@ body{
 }
 
 .container4 .icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  top: 0;
+  position: absolute;
+  min-width: 100%;
+}
+.icon{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -157,6 +175,43 @@ body{
   margin: 1.5rem 0rem ;
   gap: 1rem;
 }
+.ordomat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: 100px;
+  position: relative;
+}
+.ordo{
+  background: transparent;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem ;
+  border: 1px solid #fff;
+  opacity: 80%;
+}
+.ordo::hover{
+  background: #434559;
+}
+.dalemInv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 1.5rem 0rem ;
+}
+.dalemInv input{
+  border-radius: 15px;
+  background: transparent;
+  border: 0.1px solid #fff;
+  color: #fff;
+  text-align: center;
+  max-width: 50%;
+}
 .dalem input,
 .dalem1 input,
 .dalem3 input{
@@ -178,7 +233,13 @@ body{
 }
 .bel1,
 .bel2,
-.bel3{
+.bel3,
+.bel4,
+.bel5,
+.bel6,
+.bel7,
+.bel8,
+.bel9{
   font-size: 1rem;
   font-weight: 400;
   padding: 0rem 0rem 5%;
@@ -237,7 +298,44 @@ body{
   position: absolute;
   backdrop-filter: blur(5px);
 }
-.triinf{
+.infmat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 0.5px solid #fff;
+  border-radius: 15px;
+  min-width: 70%;
+}
+.ft1,
+.ft2,
+.ft3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 0rem 5%;
+  min-width: 70%;
+  height: 120px;
+  
+}
+.ft1 p,
+.ft2 p,
+.ft3 p{
+  color: #fff;
+  font-size: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.ft1 img,
+.ft2 img,
+.ft3 img{
+  width: 100px;
+  height: 100px;
+}
+.triinf,
+.matinf{
   min-width: 100%;
   height: 100vh;
   display: none;
@@ -246,8 +344,7 @@ body{
   position: absolute;
   backdrop-filter: blur(5px);
 }
-.inf,
-.inf1{
+.inf{
   background: transparent;
   display: flex;
   align-items: center;
@@ -256,6 +353,18 @@ body{
   position: absolute ;
   min-height: 30%;
   min-width: 70%;
+  border-radius: 15px;
+}
+.inf1,
+.inf2{
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute ;
+  min-height: 70%;
+  min-width: 80%;
   border-radius: 15px;
 }
 .close,
@@ -321,16 +430,18 @@ body{
 
 .cara,
 .caraPp,
-.caraTri{
+.caraTri,
+.caraInv2,
+.inversCara{
   display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
- /* background-color: #fff;*/
+  text-align: center;
   min-width: 100%;
-  height: 70px;
+  height: 100px;
 }
-.cara .jawaban {
+.jawaban {
   background: transparent;
   min-width: 40%;
   min-height: 100%;
@@ -401,7 +512,11 @@ body{
     }
   .container1,
   .container2,
-  .container4{
+  .container4,
+  .container5,
+  .container10,
+  .container11,
+  .container12{
     display: none;
     background: transparent;
     backdrop-filter: blur(1px);
@@ -439,6 +554,15 @@ body{
     font-size: 0.7rem;
     font-weight: 600;
   }
+  .ordo{
+    background-color: #fff;
+    border-radius: 15px;
+    color: rgb(25, 27, 31);
+    text-align: center;
+    padding: 0.5rem 1rem ;
+    border: 1px solid #fff;
+    opacity: 80%;
+  }
   .dalem input,
   .dalem1 input,
   .dalem3 input,
@@ -463,4 +587,38 @@ body{
   .me h3 a:hover{
     color: #000;
   }
+  .infmat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #fff;
+    border-radius: 15px;
+    min-width: 50%;
+  }
+  .ft1,
+  .ft2,
+  .ft3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0rem 5%;
+  min-width: 70%;
+  height: 120px;
+  
+}
+  .ft1 p,
+  .ft2 p,
+  .ft3 p{
+  color: #fff;
+  font-size: 0.7rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.ft1 img,
+.ft2 img,
+.ft3 img{
+  width: 100px;
+  height: 100px;
+}
 }
