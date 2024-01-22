@@ -23,7 +23,32 @@ function selecTor() {
   const trigonometri = document.querySelector('.container4');
   const matriks = document.querySelector('.container5');
 // === berarti harus benar, harus sama nilai nya 
-  if (selector === 'persegi' || selector === 'persegi ' || selector === 'Persegi' || selector === 'Persegi ' || selector === 'Persegipanjang ' || selector === 'persegipanjang ' || selector === 'Persegi panjang ' || selector === 'Persegi panjang' || selector === 'Persegipanjang' || selector === 'persegipanjang' || selector === 'persegi panjang' || selector === 'persegi panjang ' || selector === 'pp ' || selector === 'pp' || selector === 'PP ' || selector === 'PP' || selector === 'Pp ' || selector === 'Pp'){
+  if (selector === 'persegi' ||
+   selector === 'persegi ' ||
+   selector === 'Persegi' || 
+   selector === 'Persegi ' || 
+   selector === 'Persegipanjang ' || 
+   selector === 'persegipanjang ' || 
+   selector === 'persegipanjang(luas) ' || 
+   selector === 'persegipanjang (luas) ' || 
+   selector === 'Persegi panjang ' || 
+   selector === 'Persegi panjang (luas)' || 
+   selector === 'Persegi panjang(luas)' || 
+   selector === 'Persegi panjang' ||
+    selector === 'Persegipanjang' || 
+    selector === 'Persegipanjang(luas)' || 
+    selector === 'Persegipanjang (luas)' || 
+    selector === 'persegipanjang' || 
+    selector === 'persegi panjang' ||
+    selector === 'persegi panjang(luas)' ||
+    selector === 'persegi panjang (luas)' ||
+     selector === 'persegi panjang ' || 
+     selector === 'pp ' || 
+     selector === 'pp' || 
+     selector === 'PP ' || 
+     selector === 'PP' || 
+     selector === 'Pp ' || 
+     selector === 'Pp'){
     persegi.style.display = 'flex'
     //persegi.style.animation ='animasi2 1.2s 1 ease forwards';
     selhid.style.display = 'none'
@@ -39,7 +64,10 @@ function selecTor() {
   //.toLowerCase() digunakan untuk mengonversi semua karakter dalam suatu string menjadi huruf kecil (lowercase).
   else if (
   selector.trim().toLowerCase() === 'segitiga' ||
-  selector.trim().toLowerCase() === 'segitiga ' ||
+  selector.trim().toLowerCase() === 'segitiga ' || 
+  selector.trim().toLowerCase() === 'segitiga (sisi miring)' ||
+  selector.trim().toLowerCase() === 'segitiga(sisi miring)' ||
+  selector.trim().toLowerCase() === 'segitiga(sisimiring)' ||
   selector.trim().toLowerCase() === 'segitiga ' ||
   selector.trim().toLowerCase() === 'sgt ' ||
   selector.trim().toLowerCase() === 'sgt' ||
@@ -62,6 +90,10 @@ else if (
   selector.trim().toLowerCase() === 'trigonometri' ||
   selector.trim().toLowerCase() === 'trogonometri ' ||
   selector.trim().toLowerCase() === 'trigonometri ' ||
+  selector.trim().toLowerCase() === 'trigonometri (sudut istimewa)' ||
+  selector.trim().toLowerCase() === 'trigonometri(sudut istimewa)' ||
+  selector.trim().toLowerCase() === 'trigonometri(sudutistimewa)' ||
+  selector.trim().toLowerCase() === 'trigonometri (sudutistimewa)' ||
   selector.trim().toLowerCase() === 'tgnm ' ||
   selector.trim().toLowerCase() === 'tri' ||
   selector.trim().toLowerCase() === 'tgm' ||
@@ -79,6 +111,12 @@ document.querySelector('.container4 .close-icontri').onclick = (e) =>{
 };
 }
 else if (selector.trim().toLowerCase() === 'matriks' ||
+    selector.trim().toLowerCase() === 'matriks(2*2)' ||
+    selector.trim().toLowerCase() === 'matriks (2*2)' ||
+    selector.trim().toLowerCase() === 'matriks(3*3)' ||
+    selector.trim().toLowerCase() === 'matriks (3*3)' ||
+    selector.trim().toLowerCase() === 'matriks 2*2' ||
+    selector.trim().toLowerCase() === 'matriks 3*3' ||
     selector.trim().toLowerCase() === 'matrik' ||
     selector.trim().toLowerCase() === 'matrix' ||
     selector.trim().toLowerCase() === 'mtx' ||
@@ -97,7 +135,7 @@ else if (selector.trim().toLowerCase() === 'matriks' ||
 };
   }
   else {
-    alert('maaf operasi hitung baru ada untuk persegi panjang dan segitiga, untuk info daftar operasi ada di icon i di pojok kanan atas');
+    alert('maaf masukkan operasi hitung yang benar, daftar operasi hitung ada di icon i di kanan atas');
   }
   
 }
